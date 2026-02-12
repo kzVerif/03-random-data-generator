@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    VERCEL_PROJECT_NAME = 'pretest-devops'
+    VERCEL_PROJECT_NAME = 'devops03-quiz1'
     VERCEL_TOKEN = credentials('VERCEL_TOKEN') // ดึงจาก Jenkins
   }
   agent any

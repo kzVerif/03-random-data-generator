@@ -24,6 +24,7 @@ pipeline {
     }
     stage('Test Build') {
       steps {
+        sh 'echo Testing'
         //   sh 'npm run test'
       }
     }

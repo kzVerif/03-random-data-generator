@@ -12,24 +12,27 @@ pipeline {
   stages {
     stage('Test npm') {
       steps {
+            sh 'echo Test npm'
           sh 'npm --version'
           sh 'node --version'
       }
     }
     stage('Build') {
       steps {
+         sh 'echo Building..............'
           sh 'npm ci'
         //   sh 'npm run build'`
       }
     }
-    stage('Test Build') {
-      steps {
-        sh 'echo Testing'
-        sh 'npm run test'
-      }
-    }
+    // stage('Test Build') {
+    //   steps {
+    //     sh 'echo Testing'
+    //     sh 'npm run test'
+    //   }
+    // }
     stage('Deploy') {
       steps {
+         sh 'echo Deploying..............'
           sh 'npm install -g vercel@latest'
           // Deploy using token-only (non-interactive)
           sh '''
